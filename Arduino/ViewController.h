@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<NSURLConnectionDataDelegate,NSURLConnectionDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *Forward;
+@property (weak, nonatomic) IBOutlet UIButton *Backward;
+@property (weak, nonatomic) IBOutlet UISwitch *Switch;
+@property (weak, nonatomic) IBOutlet UIButton *right;
+@property (weak, nonatomic) IBOutlet UIButton *Left;
+@property (strong,nonatomic)NSString * ipString;
 @end

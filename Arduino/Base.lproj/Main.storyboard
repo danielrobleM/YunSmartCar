@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9m8-Em-SIv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -15,13 +15,160 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Base.png" translatesAutoresizingMaskIntoConstraints="NO" id="oMd-cX-WmL">
+                                <rect key="frame" x="7" y="134" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPY-WC-81z">
+                                <rect key="frame" x="132" y="159" width="51" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="fordward.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="fordwardHold.png"/>
+                                <connections>
+                                    <action selector="Forward:" destination="vXZ-lx-hvc" eventType="touchDown" id="zN5-Fk-OdE"/>
+                                    <action selector="SendGetForward:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OWZ-fx-Oa1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emg-Vu-meA">
+                                <rect key="frame" x="41" y="254" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="left.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="leftHold.png"/>
+                                <connections>
+                                    <action selector="Left:" destination="vXZ-lx-hvc" eventType="touchDown" id="lnt-wL-guR"/>
+                                    <action selector="SendGetLeft:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d5A-Fe-zLe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qm2-Ip-yko">
+                                <rect key="frame" x="213" y="254" width="64" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="right.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="rightHold.png"/>
+                                <connections>
+                                    <action selector="Right:" destination="vXZ-lx-hvc" eventType="touchDown" id="znX-1e-dii"/>
+                                    <action selector="SendGetRight:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gRJ-5M-1MQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qu-AQ-yth">
+                                <rect key="frame" x="132" y="333" width="51" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backward.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="backwardHold.png"/>
+                                <connections>
+                                    <action selector="Backward:" destination="vXZ-lx-hvc" eventType="touchDown" id="YHS-cc-jYy"/>
+                                    <action selector="SendGetBackward:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aqT-lg-A7H"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xVr-qu-lBv">
+                                <rect key="frame" x="251" y="528" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slow Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ7-EF-JLS">
+                                <rect key="frame" x="145" y="528" width="92" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DOw-JD-RSU"/>
+                    <connections>
+                        <outlet property="Backward" destination="1Qu-AQ-yth" id="bKu-rP-neN"/>
+                        <outlet property="Forward" destination="WPY-WC-81z" id="ImK-Fr-tCz"/>
+                        <outlet property="Left" destination="emg-Vu-meA" id="1qm-s2-3g9"/>
+                        <outlet property="Switch" destination="xVr-qu-lBv" id="0eU-r7-PLt"/>
+                        <outlet property="right" destination="qm2-Ip-yko" id="mgu-fX-bu6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="861" y="69"/>
+        </scene>
+        <!--IP View Controller - Insert IP -->
+        <scene sceneID="KZT-TF-VAL">
+            <objects>
+                <viewController id="9fr-Hp-9qE" customClass="iPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ebo-g4-YrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="NhD-Wy-ZTk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SFU-52-B2X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168.2.15" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wro-kt-dvD">
+                                <rect key="frame" x="71" y="161" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iZ-pT-2jF">
+                                <rect key="frame" x="101" y="214" width="118" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.80000000000000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextView:" destination="9fr-Hp-9qE" eventType="touchUpInside" id="wKi-uv-VJ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Insert IP " id="vYJ-my-g4T"/>
+                    <connections>
+                        <outlet property="GoToNextView" destination="3iZ-pT-2jF" id="8hK-Ek-T0h"/>
+                        <outlet property="iPTextField" destination="Wro-kt-dvD" id="DvU-NF-2MX"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="NextView" id="cTD-V9-IZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiE-T1-Ksg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="69"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H2U-TQ-jTq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9m8-Em-SIv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h19-7d-yVd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9fr-Hp-9qE" kind="relationship" relationship="rootViewController" id="Tem-Jo-jIh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2f-fY-hkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="69"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Base.png" width="594" height="595"/>
+        <image name="backward.png" width="110" height="140"/>
+        <image name="backwardHold.png" width="110" height="140"/>
+        <image name="fordward.png" width="110" height="139"/>
+        <image name="fordwardHold.png" width="110" height="139"/>
+        <image name="left.png" width="141" height="112"/>
+        <image name="leftHold.png" width="141" height="112"/>
+        <image name="right.png" width="141" height="111"/>
+        <image name="rightHold.png" width="141" height="111"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
