@@ -213,6 +213,11 @@ if ([mode isEqualToString:@""] || [mode isEqualToString:@"left"]) {
 {
     NSString* newStr = [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
     NSLog(@"%@",newStr);
+    if (newStr.length>0) {
+    // need display Green light
+    }else{
+    // need display Red light
+    }
     [self.conn cancel];
 }
 
